@@ -19,7 +19,7 @@ def best_first_search(graph, start, goal, h):
                 heapq.heappush(open_list, (h(neighbor, goal), neighbor))
                 came_from[neighbor] = current
                 
-        return None
+    return None
     
 graph = {'Arad' : [('Zerind', 75), ('Timisoara', 118), ('Sibiu', 140)], 
          'Zerind' : [('Oradea', 71),('Arad', 75)],
@@ -72,4 +72,4 @@ def rbfs(graph, node, goal, f_limit, h):
             return None
         bound = t
         
-print("RBFS: "(rbfs(graph, 'Arad', 'Bucharest', float('inf'), heuristic)))
+print(rbfs(graph, 'Arad', 'Bucharest', float('inf'), heuristic))
